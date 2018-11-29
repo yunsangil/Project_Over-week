@@ -1,0 +1,379 @@
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/css?family=Cute+Font);
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 50px;
+}
+ol,ul{
+    list-style: none;
+}
+
+
+body{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    font-family: 'Cute Font', cursive;
+    color: black;
+    font-size: 50px;
+}
+a{
+    outline: 0;
+    text-decoration: none;
+    color:black;
+}
+img{
+    border: 0;
+}
+.wrap{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    min-width: 1024px;
+    min-height: 600px;
+    perspective: 900px;
+}
+.btnMenu{
+    position: fixed;
+    top: 50px;
+    left: 40px;
+    display: inline-block;
+    width: 20px;
+    height: 70px;
+    text-align: center;
+    font-size: 40px;
+    background-color: #f6F7Fc;
+    color: black;
+    z-index: 3;
+    animation: ani 0.5s infinite alternate;
+}
+@keyframes ani{
+    0% {
+        transform: scale(1);
+        opacity: 1;
+        color: #fff;
+    }
+    100%{
+        transform: scale(1.5);
+        opacity: 0.8;
+        color: #888;
+    }
+}
+nav{
+    position: fixed;
+    width: 150px;
+    height: 100%;
+    background: #eee;
+    z-index: 2;
+    transform: rotateY(120deg);
+    transform-origin: left center;
+    opacity: 0;
+    transition: all 0.8s;
+}
+
+nav h1{
+    width: 100px;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    margin-left: -50px;
+}
+nav h1 img{
+    width: 100%;
+    height: auto;
+}
+nav ul{
+    position: absolute;
+    top: 35%;
+    left: 0px;
+    width: 100%;
+}
+nav li a{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 18px;
+    line-height: 4;
+    color: #000;
+    text-align: center;
+    transition: all 0.5s;
+}
+nav li a:hover{
+    color: #fff;
+    background:#000;
+}
+
+section{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #555;
+    z-index: 1;
+    transform-origin: right center;
+    transition: all 0.5s;
+}
+
+section>div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    perspective: 700px;
+    transition: all 1.5s;
+}
+
+section>div>p{
+    box-sizing: border-box;
+    text-align: center;
+    overflow: hidden;
+    transform: rotateY(180deg); transition: all 1.5s;
+}
+
+section>div.on>p{
+    transform: rotateY(0deg);
+}
+section.on{
+    transform: rotateY(-10deg);
+}
+nav.on{
+    transform: rotateY(15deg); 
+    opacity: 1;
+}
+section>div.on{
+    z-index: 2;
+    opacity: 1;
+}
+.box1>.pannel{
+    height: 25%;
+    float: left;
+    border: 2px solid;
+    box-sizing: border-box;
+}
+.box1>.one,.two,.six{
+    width: 25%;
+}
+
+.box1>.three{
+    width: 50%;
+    height: 50%;
+    float: right;
+    /* background:url("DAO_MySQL.png") no-repeat center center;
+    background-size: cover; */
+}
+.box1>.four,.five,.seven{
+    width: 25%;
+    float: right;
+    /* background:url("Caesar.png") no-repeat center center;
+    background-size: cover; */
+}
+.box1>.eight{
+    width: 50%;
+    float: right;
+    /* background:url("Product.jpg") no-repeat center center; */
+    /* background-size: cover; */
+}
+
+.box1>.nine{
+    width: 50%;
+    /* background:url("Zoo.png") no-repeat center center;
+    background-size: cover; */
+}
+.box1>.ten{
+    width: 50%;
+    float: right;
+    /* background:url("DAO_Oracle.png") no-repeat center center;
+    background-size: cover; */
+}
+.background_blue{
+    background: blue;
+    color: white;
+}
+.background_white{
+    background: white;
+    color: blue;
+}
+.background_yellow{
+    background: yellow;
+    color: green;
+}
+.background_green{
+    background: green;
+    color: white;
+}
+
+.box2>p{
+    height: 25%;
+    float: left;
+    border: 2px solid;
+    box-sizing: border-box;
+}
+.box2>p:nth-child(1){
+    width: 25%;
+    background: #ddd;
+}
+.box2>p:nth-child(2){
+    width: 25%;
+    background: #ccc;
+}
+.box2>p:nth-child(3){
+    width: 50%;
+    background: #bbb;
+}
+.box2>p:nth-child(4){
+    width: 25%;
+    height: 50%;
+    background: #aaa;
+    float: right;
+}
+.box2>p:nth-child(5){
+    width: 50%;
+    height: 50%;
+    background: #999;
+    float: right;
+}
+.box2>p:nth-child(6){
+    width: 25%;
+    background: #888;
+}
+.box2>p:nth-child(7){
+    width: 25%;
+    background: #777;
+}
+.box2>p:nth-child(8){
+    width: 25%;
+    background: #666;
+}
+.box2>p:nth-child(9){
+    width: 25%;
+    background: #555;
+}
+.box2>p:nth-child(10){
+    width: 50%;
+    background: #444;
+}
+
+.box3>p{
+    width: 25%;
+    height: 25%;
+    float: left;
+    border: 2px solid;
+    box-sizing: border-box;
+}
+.box3>p>img{
+    width: 100%;
+    height: 100%;
+}
+.box3>p:nth-child(1){
+    width: 50%;
+    height: 100%;
+    background: #ddd;
+}
+
+.box3>p:nth-child(2){
+    width: 50%;
+    height: 22.5%;
+    background: #ccc;
+}
+.box3>p:nth-child(3){
+    width: 50%;
+    height: 12.5%;
+    background: #bbb;
+}
+.box3>p:nth-child(4){
+    width: 50%;
+    background: #aaa;
+    padding: 1em;
+}
+.box3>p:nth-child(5){
+    width: 40%;
+    height: 40%;
+    background: #888;
+}
+.box3>p:nth-child(6){
+    width: 10%;
+    height: 40%;
+}
+.box3>p:nth-child(6)>img{
+    -webkit-transform-origin: 50% 0%;
+    -ms-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    width: 100%;
+    height: 100%;
+}
+
+.box1 .pannel:first-child{
+    background-color: black;
+}
+figure.pannel {
+    font-family: 'Cute Font', cursive;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    height: 25%;
+    width: 25%;
+    color: black;
+    text-align: left;
+    font-size: 50px;
+    -webkit-perspective: 50em;
+    perspective: 50em;
+    float: left;
+    border: 2px solid;
+  }
+  figure.pannel * {
+    /* -webkit-box-sizing: border-box;
+    box-sizing: border-box; */
+    -webkit-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+  }
+  figure.pannel img {
+    opacity: 1;
+    -webkit-transform-origin: 50% 0%;
+    -ms-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    width: 100%;
+    height: 100%;
+  }
+  figure.pannel figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    -webkit-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    -webkit-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    z-index: 1;
+    opacity: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+  }
+  
+  figure.pannel:hover img,
+  figure.pannel.hover img {
+    -webkit-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+  figure.pannel:hover figcaption,
+  figure.pannel.hover figcaption {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    opacity: 1;
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+  }
+  button{
+    border: 0px;
+      width: 32px;
+      height: 32px;
+      overflow:hidden; /*위치를 넘어선 것은 안보이도록 설정*/
+  }
+  button>img{
+      width: 32px;
+      height: 46px;
+  }

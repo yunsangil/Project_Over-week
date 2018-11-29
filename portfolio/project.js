@@ -1,0 +1,30 @@
+$(document).ready(function () {
+
+    $(".btnMenu").on("click", function () {
+        $(this).fadeOut();
+        $("section").addClass("on");
+        $("nav").addClass("on");
+    });
+
+    $("nav li").on("click", function () {
+        $(".btnMenu").fadeIn();
+        $("section").removeClass("on");
+        $("nav").removeClass("on");
+        var i = $(this).index();
+        $("section>div").removeClass("on");
+        $("section>div").eq(i).addClass("on");
+    });
+    $(".hover").mouseleave(function () {
+          $(this).removeClass("hover");
+        });
+    $('button').click(function() {
+        var lang = $(this).data('lang');
+        setLanguage(lang); 
+    });
+});
+function setLanguage(currentLanguage) {
+    $('[data-langNum]').each(function() {
+      var $this = $(this); 
+      $this.html($.lang[currentLanguage][$this.data('langnum')]); 
+    });	
+  }  

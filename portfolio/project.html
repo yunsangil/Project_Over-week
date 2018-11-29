@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="project.js"></script>
+    <link rel="stylesheet" type="text/css" href="project.css">
+    <script type="text/javascript">
+    var date = new Date();
+    var age = date.getFullYear()-1993 +1;
+    window.onload = function(){
+    document.getElementById("age").innerHTML="이름 : 윤상일 <br> 나이 : "+age;
+    }
+    $.lang = {};
+
+    $.lang.ko = {   
+        main_a: 'github 메인',
+        des_a1: '1. 초기순열 구현',
+        des_a2: '2. 초기,압축순열 구현',
+        des_a3: '3. 암호화 구현',
+        caesar_a: 'Caesar 암호 C코딩',
+        vigenere_a:'Vigenere 암호 C코딩',
+        affine_a: 'Affine 암호 C코딩',
+        playfair_a: 'Playfair 암호 C코딩',
+        product_a: 'Product 암호 C코딩',
+        zoo_a: '상속 : 동물원 프로젝트 Java',
+        1: '이름 : 윤상일 <br> 나이 : '+age,
+        2: '전화번호 : +82 10-4661-7423',
+        3: '보유기술<br>운영체제 : Linux, Windows<br>프로그래밍 언어 : C,Java(JSP),Python<br>데이터베이스 : MySQL,MS-SQL,Oracle'
+    };
+    
+    $.lang.en = {
+        main_a: 'github main',
+        des_a1: '1. Initial Permutation implementation',
+        des_a2: '2. Initial, compressible permutation implementation',
+        des_a3: '3. Encryption Implementation',
+        caesar_a: 'Caesar Cipher C Coding',
+        vigenere_a:'Vigenere Cipher C Coding',
+        affine_a: 'Affine Cipher C Coding',
+        playfair_a: 'Playfair Cipher C Coding',
+        product_a: 'Product Cipher C Coding',
+        zoo_a: 'Extend : Zoo Project Java',
+        1: 'Name :Yun sang il <br> Age : '+age,
+        2: 'Phone number :+82 10-4661-7423',
+        3: 'Possesion Tech<br>O.S : Linux, Windows<br>Programming : C,Java(JSP),Python<br>DB : MySQL,MS-SQL,Oracle'
+    };
+        
+    $.lang.ja = {
+        main_a: 'github メイン',
+        des_a1: '1. 初期順列 実装',
+        des_a2: '2. 初期、圧縮順列 実装',
+        des_a3: '3. 暗号化 実装',
+        caesar_a: 'Caesar 暗号 C コーディング',
+        vigenere_a:'Vigenere 暗号 C コーディング',
+        affine_a: 'Affine 暗号 C コーディング',
+        playfair_a: 'Playfair 暗号 C コーディング',
+        product_a: 'Product 暗号 C コーディング',
+        zoo_a: '拡張 : 動物園 プロジェクト Java',
+        1: 'お名前 : ユン・サンイル <br> 年齢 : '+age,
+        2: '電話番号 :+82 10-4661-7423',
+        3: '保有技術<br>O.S : Linux, Windows<br>Programming : C,Java(JSP),Python<br>DB : MySQL,MS-SQL,Oracle'
+    };
+    </script>
+</head>
+
+<body>  
+    <div class="wrap">
+
+        <a class="btnMenu" href="#"></a>
+        <nav>
+            <h1><img src="htghtc34.jpg"></h1>
+            <ul id="gnb">
+                <li><a href="#">Java/C</a></li>
+                <li><a href="#">JSP/Spring</a></li>
+                <li><a href="#">About Me</a></li>
+                <div style="padding:13px">
+                    <button data-lang="ko"><img src="ko.jpg" class="img_ko"></button>
+                    <button data-lang="ja"><img src="jp.jpg" class="img_jp"></button>
+                    <button data-lang="en"><img src="en.jpg" class="img_en"></button>
+                </div>
+            </ul>
+        </nav>
+        <section>
+            <div class="box1 on">
+                <figure class="pannel one"><img src="github.png">
+                    <figcaption class="background_blue"><a class="background_blue" href="https://github.com/yunsangil" target="_blank" data-langNum="main_a">Github 메인</a></figcaption>
+                </figure>
+                <figure class="pannel two"><img src="DAO_MySQL.png">
+                    <figcaption class="background_white"><a class="background_white" href="https://github.com/yunsangil/Java/tree/master/hm181113_project_workadmin"
+                            target="_blank">DAO/DTO-MySQL Java</a></figcaption>
+                </figure>
+                <figure class="pannel three"><img src="DES.png">
+
+                    <figcaption class="background_blue">※DES Project※<br><a class="background_blue" href="https://github.com/yunsangil/C-coding-ciphers/blob/master/des_project_first.c"
+                            target="_blank" data-langNum="des_a1">1. 초기순열 구현</a>
+                        <br><a class="background_blue" href="https://github.com/yunsangil/C-coding-ciphers/blob/master/des_second.c" target="_blank" data-langNum="des_a2">2.
+                            초기,압축순열 구현</a>
+                        <br><a class="background_blue" href="https://github.com/yunsangil/C-coding-ciphers/blob/master/des_third.c" target="_blank" data-langNum="des_a3">3.
+                            암호화 구현</a></figcaption>
+                </figure>
+                <figure class="pannel four">
+                    <img src="Caesar.png"><figcaption class="background_green"><a class="background_green" href="https://github.com/yunsangil/C-coding-ciphers/blob/master/Caesar.c" target="_blank" data-langNum="caesar_a">Caesar
+                    암호 C코딩</a></figcaption></figure>
+                <figure class="pannel five">
+                    <img src="Vigenere.png"><figcaption class="background_yellow"><a class="background_yellow" href="https://github.com/yunsangil/C-coding-ciphers/blob/master/Vigenere.c" target="_blank" data-langNum="vigenere_a">Vigenere
+                        암호 C코딩</a></figcaption>
+                </figure>
+                <figure class="pannel six">
+                    <img src="Affine.png"><figcaption class="background_blue"><a class="background_blue" href="https://github.com/yunsangil/C-coding-ciphers/blob/master/Affine.c" target="_blank" data-langNum="affine_a">Affine
+                        암호 C코딩</a></figcaption>
+                </figure>
+                <figure class="pannel seven">
+                    <img src="Playfair.png"><figcaption class="background_white"><a class="background_white" href="https://github.com/yunsangil/C-coding-ciphers/blob/master/playfair.c" target="_blank" data-langNum="playfair_a">Playfair
+                        암호 C코딩</a></figcaption>
+                </figure>
+                <figure class="pannel eight">
+                    <img src="Product.jpg"><figcaption class="background_yellow"><a class="background_yellow" href="https://github.com/yunsangil/C-coding-ciphers/blob/master/product.c" target="_blank" data-langNum="product_a">Product
+                        암호 C코딩</a></figcaption>
+                </figure>
+                <figure class="pannel nine"><img src="Zoo.png"><figcaption class="background_green"><a class="background_green" href="https://github.com/yunsangil/Java/tree/master/hm181115_zoo/src" target="_blank" data-langNum="zoo_a">상속 : 동물원
+                    프로젝트 Java</a></figcaption></figure>
+                    <figure class="pannel ten"><img src="DAO_Oracle.png"><figcaption class="background_white"><a class="background_white" href="https://github.com/yunsangil/Java/tree/master/hm181112/src/oraTest" target="_blank">DAO/DTO-Oracle
+                        Java</a></figcaption></figure>
+            </div>
+            <div class="box2"><!-- JSP/SPRING 관련 프로젝트가 들어가야되는데 현재로써 진행한게 없음. 추후 업데이트 예정 -->
+                <p>JSP/SPRING 1번</p>
+                <p>JSP/SPRING 2번</p>
+                <p>JSP/SPRING 3번</p>
+                <p>JSP/SPRING 4번</p>
+                <p>JSP/SPRING 5번</p>
+                <p>JSP/SPRING 6번</p>
+                <p>JSP/SPRING 7번</p>
+                <p>JSP/SPRING 8번</p>
+                <p>JSP/SPRING 9번</p>
+                <p>JSP/SPRING 10번</p>
+            </div>
+            <div class="box3">
+                <p><img src="2.gif"></p>
+                <p data-langNum="1" id="age">
+                    <!-- <h2 data-langNum="0">테스트</h2> -->
+                    <!-- <h2 data-langNum="1">이름 : 윤상일</h2> -->
+                    <!-- <h2 data-langNum="2">Name : Yun sang il</h2> -->
+                    <!-- <h2 data-langNum="3">お名前 : ユン・サンイル</h2> -->
+                </p>
+                <p data-langNum="2">
+                    전화번호 : +82 10-4661-7423</p>
+                <p>https://github.com/yunsangil</p>
+                <p data-langNum="3">보유기술<br>운영체제 : Linux, Windows<br>프로그래밍 언어 : C,Java(JSP),Python<br>DB : MySQL,MS-SQL,Oracle</p>
+                <p><img src="Looooord.jpg"></p>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
